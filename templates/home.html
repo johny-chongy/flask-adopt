@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="d-flex flex-column">
+    {% for pet in pets %}
+      <div class="w-auto p-3">
+        <h1>{{ pet.name }}</h1>
+        <img class="w-25" src="{{pet.photo_url}}" alt="cute pet">
+        {% if pet.available %}
+          <p><b>Available</b></p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}

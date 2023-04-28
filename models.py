@@ -55,3 +55,6 @@ class Pet(db.Model):
         db.Boolean,
         default=True
     )
+
+#TODO: make nullable=false when using default
+#TODO: seed!

@@ -4,10 +4,14 @@ import os
 
 from flask import Flask, render_template, flash, redirect
 from flask_debugtoolbar import DebugToolbarExtension
+from dotenv import load_dotenv
 
 from models import connect_db, Pet, db
 
 from forms import AddPetForm, EditPetForm
+
+CLIENT_ID = os.environ['CLIENT_ID']
+CLIENT_SECRET = os.environ['CLIENT_SECRET']
 
 app = Flask(__name__)
 app.debug = True
